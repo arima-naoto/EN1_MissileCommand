@@ -10,6 +10,7 @@ public class TitleManeger : MonoBehaviour
    private string nextSceneName;
     void Start()
     {
+        Screen.SetResolution(1280,720,false);
     }
 
     void Update()
