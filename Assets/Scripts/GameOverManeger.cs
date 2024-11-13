@@ -8,6 +8,10 @@ public class GameOverManeger : MonoBehaviour
     [SerializeField]
     private string nextScene;
 
+    [SerializeField, Header("ScoreUISetting")]
+    private ResultScoreText scoreText;
+    private int score;
+
     void Start()
     {
         
@@ -15,8 +19,16 @@ public class GameOverManeger : MonoBehaviour
 
     void Update()
     {
+        this.SetScore();
+
         if(Input.GetKeyDown(KeyCode.Space)){
             SceneManager.LoadScene(nextScene);
         }
+    }
+
+    private void SetScore()
+    {
+        score = GameManeger.GetScore();
+        scoreText.SetScore(score);
     }
 }

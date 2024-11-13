@@ -41,7 +41,7 @@ public class GameManeger : MonoBehaviour
     //スコアテキスト
     [SerializeField,Header("ScoreUISettings")]
     private ScoreText scoreText_;
-    private int score_;
+    private static int score_;
 
     // ライフ関係
     [SerializeField,Header("LifeUISettings")]
@@ -94,6 +94,9 @@ public class GameManeger : MonoBehaviour
 
         // 体力の初期化
         this.ResetLeft();
+
+        score_ = 0;
+
     }
 
     //更新処理
@@ -232,6 +235,8 @@ public class GameManeger : MonoBehaviour
         itemSpwanPoint_.position,
         Quaternion.identity);  
     }
+
+    public static int GetScore() {  return score_; }
 
     #endregion
 
