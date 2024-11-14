@@ -6,15 +6,24 @@ using UnityEngine.UI;
 
 public class TitleManeger : MonoBehaviour
 {
-   [SerializeField]
-   private string nextSceneName;
+    [SerializeField]
+    private string nextSceneName;
+
+    bool modeFullScreen = true;
+
     void Start()
     {
-        Screen.SetResolution(1280,720,false);
     }
 
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.F5)){
+            modeFullScreen ^= false;
+        }
+
+        Screen.SetResolution(1280, 720, modeFullScreen);
+
         if(Input.GetKeyDown(KeyCode.Space)){
             SceneManager.LoadScene(nextSceneName);
         }
