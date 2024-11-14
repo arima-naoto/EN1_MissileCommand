@@ -19,7 +19,7 @@ public class TitleManeger : MonoBehaviour
     {
 
         if (Input.GetKeyDown(KeyCode.F5)){
-            modeFullScreen ^= false;
+            modeFullScreen ^= !modeFullScreen;
         }
 
         Screen.SetResolution(1280, 720, modeFullScreen);
