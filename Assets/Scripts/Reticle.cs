@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Reticle : MonoBehaviour
 {
-    private Vector3 rotateSpeed = new Vector3(0, 0, -0.05f);
+    private Vector3 rotateSpeed = new Vector3(0, 0, -1f);
 
     void Start()
     {
