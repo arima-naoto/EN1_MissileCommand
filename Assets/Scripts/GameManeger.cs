@@ -50,7 +50,7 @@ public class GameManeger : MonoBehaviour
     //最大体力
     [SerializeField] private float maxLife_ = 10;
     //現在体力
-    private float life_;
+    private static float life_;
 
     [SerializeField,Header("ItemSetting")]
     //アイテム生成位置
@@ -236,8 +236,8 @@ public class GameManeger : MonoBehaviour
         Quaternion.identity);  
     }
 
+    //スコアを取得する
     public static int GetScore() {  return score_; }
 
     #endregion
-
 }
